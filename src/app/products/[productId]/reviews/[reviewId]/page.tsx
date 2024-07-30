@@ -1,9 +1,14 @@
 import React from 'react'
 
-export default function ReviewDetail() {
+export default function ReviewDetail({ params }: {
+    params: {
+        productId: string,
+        reviewId: string
+    }
+}) {
   return (
     <h1>
-        Review {} for product {}
+        Review {params.reviewId} for product {params.productId}
     </h1>
   )
 }
