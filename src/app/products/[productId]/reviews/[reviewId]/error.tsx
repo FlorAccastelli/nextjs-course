@@ -2,10 +2,13 @@
 
 import React from 'react'
 
-export default function ErrorBundary({ error }: {
-    error: Error
+export default function ErrorBundary({ error, reset }: {
+    error: Error; reset: () => void;
 }) {
   return (
-    <div>{error.message}</div>
+    <div>
+        {error.message}
+        <button onClick={reset}>Try again</button>
+    </div>
   )
 }
